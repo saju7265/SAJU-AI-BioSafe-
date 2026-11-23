@@ -1,5 +1,5 @@
 
-name: Build SAJU AI APK
+name: Build BioSafe AI APK
 
 on:
   workflow_dispatch:
@@ -46,8 +46,8 @@ jobs:
           chmod +x gradlew
           ./gradlew assembleDebug
 
-      - name: Upload APK
+      - name: Upload BioSafe AI APK
         uses: actions/upload-artifact@v4
         with:
-          name: SAJU-AI-APK
+          name: BioSafe-AI-APK
           path: extracted/**/build/outputs/apk/debug/*.apk
